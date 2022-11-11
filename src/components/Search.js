@@ -5,7 +5,7 @@ import PriceDropdown from './PriceDropdown';
 
 const Search = () => {
     return (
-        <div>
+        <div className='py-10'>
             <div className='px-[100px] py-4 max-w-[1170px] mx-auto flex flex-col lg:flex-row justify-between gap-4 lg:gap-x-3 relative lg:-top-4 lg:shadow-1 bg-white lg:bg-transparent lg:backdrop-blur rounded-lg'>
                 <span className='font-semibold text-2xl'>Search properties to rent</span>
                 <div class="flex justify-center">
