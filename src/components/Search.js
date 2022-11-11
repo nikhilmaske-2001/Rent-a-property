@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import PropertyTypeDropdown from './PropertyTypeDropdown';
-import LocationDropdown from './LocationDropdown';
+import CountryDropdown from './CountryDropdown';
 import PriceDropdown from './PriceDropdown';
 
 import { HouseContext } from './HouseContext';
@@ -18,8 +18,8 @@ const Search = () => {
                     </div>
                 </div>
             </div>
-            <div className='px-[100px] py-6 max-w-[1170px] mx-auto flex flex-col lg:flex-row justify-between gap-4 lg:gap-x-3 relative lg:-top-4 lg:shadow-1 bg-white lg:bg-transparent lg:backdrop-blur rounded-lg'>
-                <LocationDropdown />
+            <div className='px-[100px] max-w-[1170px] mx-auto flex flex-col lg:flex-row justify-between gap-4 lg:gap-x-3 relative lg:-top-4 lg:shadow-1 bg-white lg:bg-transparent lg:backdrop-blur rounded-lg'>
+                <CountryDropdown />
                 <PropertyTypeDropdown />
                 <PriceDropdown />
                 <button
