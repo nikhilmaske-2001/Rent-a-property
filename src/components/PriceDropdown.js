@@ -26,9 +26,6 @@ const PriceDropdown = () => {
         {
             value: '190000-220000',
         },
-        {
-            value: '220000-250000',
-        }
     ]
 
     return (

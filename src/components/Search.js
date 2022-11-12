@@ -6,6 +6,7 @@ import PriceDropdown from './PriceDropdown';
 import { HouseContext } from './HouseContext';
 
 const Search = () => {
+    const { handleClick } = useContext(HouseContext);
     return (
         <div className='py-10'>
             <div className='px-[100px] py-4 max-w-[1170px] mx-auto flex flex-col lg:flex-row justify-between gap-4 lg:gap-x-3 relative lg:-top-4 lg:shadow-1 bg-white lg:bg-transparent lg:backdrop-blur rounded-lg'>
@@ -22,7 +23,7 @@ const Search = () => {
                 <CountryDropdown />
                 <PropertyTypeDropdown />
                 <PriceDropdown />
-                <button
+                <button onClick={() => handleClick()}
                     className='bg-violet-700 hover:bg-violet-800 transition w-full lg:max-w-[162px] h-10 rounded-lg flex justify-center items-center text-white text-lg'
                 >
                     Search

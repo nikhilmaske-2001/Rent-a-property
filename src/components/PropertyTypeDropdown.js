@@ -10,7 +10,6 @@ const CountryDropdown = () => {
     const { property, setProperty, properties } = useContext(HouseContext);
     const [isOpen, setIsOpen] = useState(false);
 
-    console.log(properties);
 
     return (
         <Menu as='div' className='dropdown relative'>
