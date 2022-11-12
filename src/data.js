@@ -195,7 +195,7 @@ export const housesData = [
     bathrooms: '1',
     surface: '1200 sq ft',
     year: '2012',
-    price: '20000',
+    price: '200000',
     agent: {
       image: Agent7,
       name: 'Jawhar Shamil Naser',
@@ -216,7 +216,7 @@ export const housesData = [
     bathrooms: '1',
     surface: '1000 sq ft',
     year: '2011',
-    price: '30000',
+    price: '300000',
     agent: {
       image: Agent8,
       name: 'Juana Douglass',
@@ -237,7 +237,7 @@ export const housesData = [
     bathrooms: '1',
     surface: '1100 sq ft',
     year: '2011',
-    price: '40000',
+    price: '400000',
     agent: {
       image: Agent9,
       name: 'Jerry Schenck',
@@ -384,7 +384,7 @@ export const housesData = [
     bathrooms: '1',
     surface: '1300 sq ft',
     year: '2011',
-    price: '21000',
+    price: '210000',
     agent: {
       image: Agent4,
       name: 'Kaitlyn Gonzalez',
@@ -405,7 +405,7 @@ export const housesData = [
     bathrooms: '1',
     surface: '1000 sq ft',
     year: '2012',
-    price: '32000',
+    price: '320000',
     agent: {
       image: Agent5,
       name: 'Grover Robinson',
@@ -426,7 +426,7 @@ export const housesData = [
     bathrooms: '1',
     surface: '1200 sq ft',
     year: '2010',
-    price: '38000',
+    price: '380000',
     agent: {
       image: Agent6,
       name: 'Karen Sorensen',
