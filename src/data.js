@@ -71,7 +71,7 @@ export const housesData = [
     booked_till: '11/25/2022',
     surface: '4200 sq ft',
     year: '2016',
-    price: '110000',
+    price: '1100',
     agent: {
       image: Agent1,
       name: 'Patricia Tullert',
@@ -94,7 +94,7 @@ export const housesData = [
     booked_till: '11/25/2022',
     surface: '4200 sq ft',
     year: '2016',
-    price: '140000',
+    price: '1400',
     agent: {
       image: Agent2,
       name: 'Daryl Hawker',
@@ -117,7 +117,7 @@ export const housesData = [
     booked_till: '11/25/2022',
     surface: '4200 sq ft',
     year: '2016',
-    price: '170000',
+    price: '1700',
     agent: {
       image: Agent3,
       name: 'Amado Smith',
@@ -140,7 +140,7 @@ export const housesData = [
     booked_till: '11/25/2022',
     surface: '4200 sq ft',
     year: '2016',
-    price: '200000',
+    price: '2000',
     agent: {
       image: Agent4,
       name: 'Kaitlyn Gonzalez',
@@ -163,7 +163,7 @@ export const housesData = [
     booked_till: '11/25/2022',
     surface: '4200 sq ft',
     year: '2015',
-    price: '210000',
+    price: '2100',
     agent: {
       image: Agent5,
       name: 'Grover Robinson',
@@ -186,7 +186,7 @@ export const housesData = [
     booked_till: '11/25/2022',
     surface: '6200 sq ft',
     year: '2014',
-    price: '220000',
+    price: '2200',
     agent: {
       image: Agent6,
       name: 'Karen Sorensen',
@@ -209,7 +209,7 @@ export const housesData = [
     booked_till: '11/25/2022',
     surface: '1200 sq ft',
     year: '2012',
-    price: '200000',
+    price: '2000',
     agent: {
       image: Agent7,
       name: 'Jawhar Shamil Naser',
@@ -232,7 +232,7 @@ export const housesData = [
     booked_till: '11/25/2022',
     surface: '1000 sq ft',
     year: '2011',
-    price: '300000',
+    price: '3000',
     agent: {
       image: Agent8,
       name: 'Juana Douglass',
@@ -255,7 +255,7 @@ export const housesData = [
     booked_till: '11/25/2022',
     surface: '1100 sq ft',
     year: '2011',
-    price: '400000',
+    price: '500',
     agent: {
       image: Agent9,
       name: 'Jerry Schenck',
@@ -278,7 +278,7 @@ export const housesData = [
     booked_till: '11/25/2022',
     surface: '3200 sq ft',
     year: '2015',
-    price: '117000',
+    price: '1170',
     agent: {
       image: Agent10,
       name: 'Vera Levesque',
@@ -301,7 +301,7 @@ export const housesData = [
     booked_till: '11/25/2022',
     surface: '2200 sq ft',
     year: '2019',
-    price: '145000',
+    price: '1450',
     agent: {
       image: Agent11,
       name: 'Sofia Gomes',
@@ -324,7 +324,7 @@ export const housesData = [
     booked_till: '11/25/2022',
     surface: '4600 sq ft',
     year: '2015',
-    price: '139000',
+    price: '1390',
     agent: {
       image: Agent12,
       name: 'Raymond Hood',
@@ -347,7 +347,7 @@ export const housesData = [
     booked_till: '11/25/2022',
     surface: '5200 sq ft',
     year: '2014',
-    price: '180000',
+    price: '1800',
     agent: {
       image: Agent1,
       name: 'Patricia Tullert',
@@ -370,7 +370,7 @@ export const housesData = [
     booked_till: '11/25/2022',
     surface: '3200 sq ft',
     year: '2011',
-    price: '213000',
+    price: '2130',
     agent: {
       image: Agent2,
       name: 'Daryl Hawker',
@@ -393,7 +393,7 @@ export const housesData = [
     booked_till: '11/25/2022',
     surface: '5200 sq ft',
     year: '2013',
-    price: '221000',
+    price: '2510',
     agent: {
       image: Agent3,
       name: 'Amado Smith',
@@ -416,7 +416,7 @@ export const housesData = [
     booked_till: '11/25/2022',
     surface: '1300 sq ft',
     year: '2011',
-    price: '210000',
+    price: '2100',
     agent: {
       image: Agent4,
       name: 'Kaitlyn Gonzalez',
@@ -439,7 +439,7 @@ export const housesData = [
     booked_till: '11/25/2022',
     surface: '1000 sq ft',
     year: '2012',
-    price: '320000',
+    price: '3000',
     agent: {
       image: Agent5,
       name: 'Grover Robinson',
@@ -462,7 +462,7 @@ export const housesData = [
     booked_till: '11/25/2022',
     surface: '1200 sq ft',
     year: '2010',
-    price: '380000',
+    price: '2900',
     agent: {
       image: Agent6,
       name: 'Karen Sorensen',

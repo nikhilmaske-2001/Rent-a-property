@@ -15,19 +15,19 @@ const PriceDropdown = () => {
             value: 'Price range (any)',
         },
         {
-            value: '100000 - 140000',
+            value: '500 - 1000',
         },
         {
-            value: '140000 - 180000',
+            value: '1000 - 1500',
         },
         {
-            value: '180000 - 220000',
+            value: '1500 - 2000',
         },
         {
-            value: '220000 - 300000',
+            value: '2000 - 2500',
         },
         {
-            value: '300000 - 400000',
+            value: '2500 - 3000',
         },
     ]
 
@@ -39,7 +39,7 @@ const PriceDropdown = () => {
             >
                 <RiWallet3Line className='dropdown-icon-primary' />
                 <div>
-                    <div className='text-[15px] font-medium leading-tight'>{price}</div>
+                    <div className='text-[15px] font-medium leading-tight'>${price}</div>
                     <div className='text-[13px]'>Choose price range</div>
                 </div>
                 {isOpen ? (
@@ -58,7 +58,7 @@ const PriceDropdown = () => {
                             key={index}
                             className='cursor-pointer hover:text-violet-700 transition'
                         >
-                            {price.value}
+                            ${price.value}
                         </Menu.Item>
                     );
                 })}
