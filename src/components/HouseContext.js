@@ -16,6 +16,9 @@ const HouseContextProvider = ({ children }) => {
     const [loading, setLoading] = useState(false);
 
     useEffect(() => {
+        // Create a dropdown list of countries which are
+        // available in the dummy data
+        // Example: country = [Location (any), Canada, Europe]
         const allCountries = houses.map((house) => {
             return house.country;
         });
@@ -26,6 +29,9 @@ const HouseContextProvider = ({ children }) => {
     }, [])
 
     useEffect(() => {
+        // Create a dropdown list of property type which are
+        // available in the dummy data
+        // Example: type = [Property (any), House, Apartment]
         const allProperties = houses.map((house) => {
             return house.type;
         });
@@ -35,6 +41,8 @@ const HouseContextProvider = ({ children }) => {
     }, [])
 
     useEffect(() => {
+        // find todays date and arrange it in a formated way
+        // Ex: mm/dd/yyyy => 11/13/2022
         const today = new Date();
         const yyyy = today.getFullYear();
         let mm = today.getMonth() + 1; // Months start at 0!
@@ -59,6 +67,7 @@ const HouseContextProvider = ({ children }) => {
             const booked_till_date = new Date(booked_till);
             let date = (bookingDate.$M + 1) + '/' + bookingDate.$D + '/' + bookingDate.$y;
             const bookingDate_date = new Date(date);
+            // Below is the logic behind return statement
             // if (!(date > booked_from && date < booked_till)) {
             //     console.log("Available");
             // } else {
@@ -74,7 +83,6 @@ const HouseContextProvider = ({ children }) => {
 
         const newHouses = housesData.filter((house) => {
             const housePrice = parseInt(house.price);
-            console.log(bookingDate);
             // all values are selected
             if (
                 house.country === country &&

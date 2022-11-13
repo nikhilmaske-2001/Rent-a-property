@@ -1,4 +1,3 @@
-import './App.css';
 import Header from './components/Header';
 import HouseList from './components/HouseList';
 import Search from './components/Search';

@@ -1,9 +1,6 @@
-import React, { useState, useEffect, useContext } from 'react';
-// import icons
+import React, { useState, useContext } from 'react';
 import { RiHome5Line, RiArrowDownSLine, RiArrowUpSLine } from 'react-icons/ri';
-// import headless ui components
 import { Menu } from '@headlessui/react';
-// import context
 import { HouseContext } from './HouseContext';
 
 const CountryDropdown = () => {
