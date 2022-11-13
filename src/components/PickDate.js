@@ -9,13 +9,27 @@ import { HouseContext } from './HouseContext';
 
 export default function PickDate() {
     const { bookingDate, setBookingDate } = useContext(HouseContext);
+    const [minDate, setMinDate] = useState();
+
+    useEffect(() => {
+        const today = new Date();
+        const yyyy = today.getFullYear();
+        let mm = today.getMonth() + 1; // Months start at 0!
+        let dd = today.getDate();
+
+        if (dd < 10) dd = '0' + dd;
+        if (mm < 10) mm = '0' + mm;
+
+        const formattedToday = mm + '/' + dd + '/' + yyyy;
+        setMinDate(formattedToday);
+    })
 
     return (
         <LocalizationProvider dateAdapter={AdapterDayjs}>
             <DesktopDatePicker
                 label="When"
                 value={bookingDate}
-                minDate={dayjs('2017-01-01')}
+                minDate={dayjs(minDate)}
                 onChange={(newValue) => {
                     setBookingDate(newValue);
                 }}

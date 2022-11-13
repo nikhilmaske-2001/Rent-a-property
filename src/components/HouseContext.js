@@ -12,7 +12,7 @@ const HouseContextProvider = ({ children }) => {
     const [property, setProperty] = useState('Property (any)');
     const [properties, setProperties] = useState([]);
     const [price, setPrice] = useState('Price (any)');
-    const [bookingDate, setBookingDate] = useState(dayjs('2022 - 04 - 07'))
+    const [bookingDate, setBookingDate] = useState();
     const [loading, setLoading] = useState(false);
 
     useEffect(() => {
@@ -32,6 +32,19 @@ const HouseContextProvider = ({ children }) => {
 
         const uniqueProperties = ['Location (any)', ...new Set(allProperties)];
         setProperties(uniqueProperties);
+    }, [])
+
+    useEffect(() => {
+        const today = new Date();
+        const yyyy = today.getFullYear();
+        let mm = today.getMonth() + 1; // Months start at 0!
+        let dd = today.getDate();
+
+        if (dd < 10) dd = '0' + dd;
+        if (mm < 10) mm = '0' + mm;
+
+        const formattedToday = mm + '/' + dd + '/' + yyyy;
+        setBookingDate(dayjs(formattedToday));
     }, [])
 
     const handleClick = () => {
@@ -73,35 +86,35 @@ const HouseContextProvider = ({ children }) => {
                 return house;
             }
             // all values are default
-            if (isDefault(country) && isDefault(property) && isDefault(price)) {
+            if (isDefault(country) && isDefault(property) && isDefault(price) && isAvailable(house.booked_from, house.booked_till, bookingDate)) {
                 return house;
             }
             // country is not default
-            if (!isDefault(country) && isDefault(property) && isDefault(price)) {
+            if (!isDefault(country) && isDefault(property) && isDefault(price) && isAvailable(house.booked_from, house.booked_till, bookingDate)) {
                 return house.country === country;
             }
             // property is not default
-            if (!isDefault(property) && isDefault(country) && isDefault(price)) {
+            if (!isDefault(property) && isDefault(country) && isDefault(price) && isAvailable(house.booked_from, house.booked_till, bookingDate)) {
                 return house.type === property;
             }
             // price is not default
-            if (!isDefault(price) && isDefault(country) && isDefault(property)) {
+            if (!isDefault(price) && isDefault(country) && isDefault(property) && isAvailable(house.booked_from, house.booked_till, bookingDate)) {
                 if (housePrice >= minPrice && housePrice <= maxPrice) {
                     return house;
                 }
             }
             // country and property is not default
-            if (!isDefault(country) && !isDefault(property) && isDefault(price)) {
+            if (!isDefault(country) && !isDefault(property) && isDefault(price) && isAvailable(house.booked_from, house.booked_till, bookingDate)) {
                 return house.country === country && house.type === property;
             }
             // country and price is not default
-            if (!isDefault(country) && isDefault(property) && !isDefault(price)) {
+            if (!isDefault(country) && isDefault(property) && !isDefault(price) && isAvailable(house.booked_from, house.booked_till, bookingDate)) {
                 if (housePrice >= minPrice && housePrice <= maxPrice) {
                     return house.country === country;
                 }
             }
             // property and price is not default
-            if (isDefault(country) && !isDefault(property) && !isDefault(price)) {
+            if (isDefault(country) && !isDefault(property) && !isDefault(price) && isAvailable(house.booked_from, house.booked_till, bookingDate)) {
                 if (housePrice >= minPrice && housePrice <= maxPrice) {
                     return house.type === property;
                 }
