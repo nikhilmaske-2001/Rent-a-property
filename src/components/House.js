@@ -17,6 +17,9 @@ const House = ({ house }) => {
                 </div>
             </div>
             <div className='text-lg font-semibold max-w-[260px]'>
+                <span className='text-violet-700 text-2xl'>${price}</span><span className=' text-gray-700 font-thin'>/month</span>
+            </div>
+            <div className='text-lg font-semibold max-w-[260px]'>
                 {address}
             </div>
             <div className='flex gap-x-4 my-4'>
