@@ -1,4 +1,5 @@
 import React, { useState, useEffect, createContext } from 'react';
+import dayjs from 'dayjs';
 
 import { housesData } from '../data';
 
@@ -11,6 +12,7 @@ const HouseContextProvider = ({ children }) => {
     const [property, setProperty] = useState('Property (any)');
     const [properties, setProperties] = useState([]);
     const [price, setPrice] = useState('Price (any)');
+    const [bookingDate, setBookingDate] = useState(dayjs('2022 - 04 - 07'))
     const [loading, setLoading] = useState(false);
 
     useEffect(() => {
@@ -39,6 +41,19 @@ const HouseContextProvider = ({ children }) => {
             return str.split(' ').includes('(any)');
         };
 
+        const isAvailable = (booked_from, booked_till, bookingDate) => {
+            const booked_from_date = new Date(booked_from);
+            const booked_till_date = new Date(booked_till);
+            let date = (bookingDate.$M + 1) + '/' + bookingDate.$D + '/' + bookingDate.$y;
+            const bookingDate_date = new Date(date);
+            // if (!(date > booked_from && date < booked_till)) {
+            //     console.log("Available");
+            // } else {
+            //     console.log('Not Available')
+            // }
+            return (!(bookingDate_date > booked_from_date && bookingDate_date < booked_till_date));
+        }
+
         // get first string (price) and parse it to number
         const minPrice = parseInt(price.split(' ')[0]);
         // get last string (price) and parse it to number
@@ -46,9 +61,11 @@ const HouseContextProvider = ({ children }) => {
 
         const newHouses = housesData.filter((house) => {
             const housePrice = parseInt(house.price);
+            console.log(bookingDate);
             // all values are selected
             if (
                 house.country === country &&
+                isAvailable(house.booked_from, house.booked_till, bookingDate) &&
                 house.type === property &&
                 housePrice >= minPrice &&
                 housePrice <= maxPrice
@@ -111,7 +128,9 @@ const HouseContextProvider = ({ children }) => {
             setPrice,
             houses,
             loading,
-            handleClick
+            handleClick,
+            bookingDate,
+            setBookingDate
         }}>
             {children}
         </HouseContext.Provider>
